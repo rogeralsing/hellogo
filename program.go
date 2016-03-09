@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	//gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	util.Hello()
 
@@ -25,5 +26,5 @@ func main() {
 		c.String(http.StatusOK, message)
 	})
 
-	router.Run(":8080")
+	router.Run("0.0.0.0:8080")
 }
