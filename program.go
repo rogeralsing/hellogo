@@ -4,12 +4,19 @@ import (
 	"github.com/rogeralsing/hellogo/Godeps/_workspace/src/github.com/gin-gonic/gin"
 	"github.com/rogeralsing/hellogo/util"
 	"net/http"
+	"os"
 )
 
 func main() {
 	//gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	util.Hello()
+
+	router.GET("/foo", func(c *gin.Context) {
+
+		res,_ := os.Hostname()
+		c.String(http.StatusOK, "Hello %s", res)
+	})
 
 	// This handler will match /user/john but will not match neither /user/ or /user
 	router.GET("/user/:name", func(c *gin.Context) {
