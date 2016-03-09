@@ -1,5 +1,5 @@
-FROM ubuntu
+FROM scratch
 WORKDIR /app
-COPY hellogo /app/
+COPY hello /app/
 EXPOSE 8080
-ENTRYPOINT ["./hellogo"]
+ENTRYPOINT ["./hello"]

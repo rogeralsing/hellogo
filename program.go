@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	"github.com/rogeralsing/hellogo/Godeps/_workspace/src/github.com/gin-gonic/gin"
 	"github.com/rogeralsing/hellogo/util"
 	"net/http"
 )
