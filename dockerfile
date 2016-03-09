@@ -1,6 +1,5 @@
 FROM ubuntu
-WORKDIR /main
-# copy binary into image
-COPY main /main/
+WORKDIR /app
+COPY hellogo /app/
 EXPOSE 8080
-ENTRYPOINT ["./main"]
+ENTRYPOINT ["./hellogo"]
