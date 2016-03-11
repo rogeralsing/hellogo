@@ -4,8 +4,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/rhinoman/couchdb-go"
 	"github.com/rogeralsing/hellogo/util"
-	"time"
 	"net/http"
+	"os"
+	"strconv"
+	"time"
 )
 
 type PersonDocument struct {
@@ -18,30 +20,38 @@ func main() {
 	//gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	util.Hello()
-	var timeout = time.Duration(500 * time.Millisecond)
-	conn, _ := couchdb.NewConnection("127.0.0.1", 5984, timeout)
-	//auth := couchdb.BasicAuth{Username: "user", Password: "password" }
-	db := conn.SelectDB("mydb", nil)
+	timeout := time.Duration(500 * time.Millisecond)
+	port, _ := strconv.Atoi(os.Getenv("PORT"))
+	host := os.Getenv("HOST")
+	println("CouchDB Address ", host, port)
 
-	router.GET("/bar/:id", func(c *gin.Context) {
-		id := c.Param("id")
-		var doc PersonDocument
-		db.Read(id, &doc, nil)
-		c.JSON(http.StatusOK, doc)
-	})
+	if conn, err := couchdb.NewConnection(host, port, timeout); err == nil {
+		db := conn.SelectDB("mydb", nil)
 
-	router.PUT("/bar/:id", func(c *gin.Context) {
-		id := c.Param("id")
-		var doc PersonDocument
-		rev, _ := db.Read(id, &doc, nil)
-
-		if err := c.BindJSON(&doc);err == nil {
-			db.Save(doc, id, rev)
+		router.GET("/bar/:id", func(c *gin.Context) {
+			id := c.Param("id")
+			var doc PersonDocument
+			db.Read(id, &doc, nil)
 			c.JSON(http.StatusOK, doc)
-		} else {
-			c.JSON(http.StatusBadRequest, err.Error())
-		}
-	})
+		})
 
-	router.Run("0.0.0.0:8080")
+		router.PUT("/bar/:id", func(c *gin.Context) {
+			id := c.Param("id")
+			var doc PersonDocument
+			rev, _ := db.Read(id, &doc, nil)
+
+			if err := c.BindJSON(&doc); err == nil {
+				db.Save(doc, id, rev)
+				c.JSON(http.StatusOK, doc)
+			} else {
+				c.JSON(http.StatusBadRequest, err.Error())
+			}
+		})
+
+		router.Run("0.0.0.0:8080")
+	} else {
+		panic(err.Error())
+	}
+	//auth := couchdb.BasicAuth{Username: "user", Password: "password" }
+
 }
