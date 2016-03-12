@@ -13,6 +13,8 @@ web:
 
 couchdb:
   image: klaemo/couchdb
+  volumes:
+        - data:/usr/local/var/lib/couchdb
   expose:
    - 5984
   ports:

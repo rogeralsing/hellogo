@@ -9,28 +9,31 @@
     <SOURCES />
     <excluded>
       <root url="file://$PROJECT_DIR$/../../rhinoman/couchdb-go/.git" />
-      <root url="file://$PROJECT_DIR$/../../fjl/go-couchdb/couchapp/testdata" />
-      <root url="file://$PROJECT_DIR$/../../../golang.org/x/net/http2/testdata" />
-      <root url="file://$PROJECT_DIR$/../../gin-gonic/gin/.git" />
-      <root url="file://$PROJECT_DIR$/../../couchbase/go-couchbase/.git" />
       <root url="file://$PROJECT_DIR$/../../../gopkg.in/go-playground/validator.v8/.git" />
-      <root url="file://$PROJECT_DIR$/../../tools/godep/Godeps/_workspace" />
       <root url="file://$PROJECT_DIR$/../../golang/protobuf/.git" />
-      <root url="file://$PROJECT_DIR$/../../couchbase/goutils/.git" />
+      <root url="file://$PROJECT_DIR$/../../tools/godep/Godeps/_workspace" />
+      <root url="file://$PROJECT_DIR$/../go-genetic-math/.git" />
       <root url="file://$PROJECT_DIR$/../../../golang.org/x/net/html/testdata" />
-      <root url="file://$PROJECT_DIR$/../../../golang.org/x/net/.git" />
       <root url="file://$PROJECT_DIR$/Godeps/_workspace" />
       <root url="file://$PROJECT_DIR$/../../fjl/go-couchdb/.git" />
-      <root url="file://$PROJECT_DIR$/../../golang/protobuf/proto/testdata" />
       <root url="file://$PROJECT_DIR$/../../golang/protobuf/protoc-gen-go/testdata" />
+      <root url="file://$PROJECT_DIR$/../../tools/godep/.git" />
+      <root url="file://$PROJECT_DIR$/../../fjl/go-couchdb/couchapp/testdata" />
+      <root url="file://$PROJECT_DIR$/../../../golang.org/x/net/http2/testdata" />
+      <root url="file://$PROJECT_DIR$/../../couchbase/go-couchbase/.git" />
+      <root url="file://$PROJECT_DIR$/../../gin-gonic/gin/.git" />
+      <root url="file://$PROJECT_DIR$/../../couchbase/goutils/.git" />
+      <root url="file://$PROJECT_DIR$/../../../golang.org/x/net/.git" />
+      <root url="file://$PROJECT_DIR$/../go-genetic-math/.idea" />
+      <root url="file://$PROJECT_DIR$/../../golang/protobuf/proto/testdata" />
+      <root url="file://$PROJECT_DIR$/data/.delete" />
       <root url="file://$PROJECT_DIR$/../../manucorporat/sse/.git" />
       <root url="file://$PROJECT_DIR$/../hello/.idea" />
-      <root url="file://$PROJECT_DIR$/.idea" />
       <root url="file://$PROJECT_DIR$/../../../golang.org/x/net/html/charset/testdata" />
+      <root url="file://$PROJECT_DIR$/.idea" />
       <root url="file://$PROJECT_DIR$/.git" />
       <root url="file://$PROJECT_DIR$/../../couchbase/gomemcached/.git" />
       <root url="file://$PROJECT_DIR$" />
-      <root url="file://$PROJECT_DIR$/../../tools/godep/.git" />
     </excluded>
   </library>
 </component>
