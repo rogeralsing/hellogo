@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/rhinoman/couchdb-go"
-	"github.com/rogeralsing/hellogo/util"
 	"net/http"
 	"os"
 	"strconv"
@@ -27,7 +26,7 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
-	conn.CreateDB("mydb", nil)
+
 	db := conn.SelectDB("mydb", nil)
 
 	router.GET("/bar/:id", func(c *gin.Context) {
@@ -51,6 +50,7 @@ func main() {
 		}
 		if _, err := db.Save(doc, id, rev); err != nil {
 			c.JSON(http.StatusInternalServerError, err.Error())
+			return
 		}
 		c.JSON(http.StatusOK, doc)
 	})
