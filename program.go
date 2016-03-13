@@ -12,18 +12,18 @@ import (
 
 func main() {
 	//gin.SetMode(gin.ReleaseMode)
-	router := gin.Default()
-	timeout := time.Duration(500 * time.Millisecond)
-	port, _ := strconv.Atoi(os.Getenv("PORT"))
-	host := os.Getenv("HOST")
-	println("CouchDB Address ", host, port)
-	conn, err := couchdb.NewConnection(host, port, timeout)
+	dbTimeout := time.Duration(500 * time.Millisecond)
+	dbPort, _ := strconv.Atoi(os.Getenv("PORT"))
+	dbHost := os.Getenv("HOST")
+	println("CouchDB Address ", dbHost, dbPort)
+	conn, err := couchdb.NewConnection(dbHost, dbPort, dbTimeout)
 	if err != nil {
 		panic(err.Error())
 	}
 
 	db := conn.SelectDB("mydb", nil)
 
+	router := gin.Default()
 	person.CreatePersonService(router, db)
 	health.CreateHealthService(router, conn)
 	router.Run("0.0.0.0:8080")
