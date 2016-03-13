@@ -6,18 +6,18 @@ import (
 	"net/http"
 )
 
-type PersonDocument struct {
+type Person struct {
 	Name     string   `json:"name"`
 	Age      int      `json:"age"`
 	Children []string `json:"children"`
 }
 
 func CreatePersonService(router *gin.Engine, db *couchdb.Database) {
-	person := router.Group("/person/:id")
+	person := router.Group("api/v1/person")
 	{
-		person.GET("", func(c *gin.Context) {
+		person.GET(":id", func(c *gin.Context) {
 			id := c.Param("id")
-			var doc PersonDocument
+			var doc Person
 			if _, err := db.Read(id, &doc, nil); err != nil {
 				c.JSON(http.StatusInternalServerError, err.Error())
 				return
@@ -25,9 +25,9 @@ func CreatePersonService(router *gin.Engine, db *couchdb.Database) {
 			c.JSON(http.StatusOK, doc)
 		})
 
-		person.PUT("", func(c *gin.Context) {
+		person.PUT(":id", func(c *gin.Context) {
 			id := c.Param("id")
-			var doc PersonDocument
+			var doc Person
 			if err := c.BindJSON(&doc); err != nil {
 				c.JSON(http.StatusBadRequest, err.Error())
 				return
