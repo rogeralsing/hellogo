@@ -7,12 +7,15 @@ import (
 )
 
 func CreateHealthService(router *gin.Engine, conn *couchdb.Connection) {
-	router.GET("/health", func(c *gin.Context) {
-		//check DB
-		if err := conn.Ping(); err == nil {
-			c.JSON(http.StatusOK, "Healthy")
-		} else {
-			c.JSON(http.StatusInternalServerError, err.Error())
-		}
-	})
+	health := router.Group("/health")
+	{
+		health.GET("", func(c *gin.Context) {
+			//check DB
+			if err := conn.Ping(); err == nil {
+				c.JSON(http.StatusOK, "Healthy")
+			} else {
+				c.JSON(http.StatusInternalServerError, err.Error())
+			}
+		})
+	}
 }

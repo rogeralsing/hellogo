@@ -7,9 +7,9 @@ import (
 )
 
 type PersonDocument struct {
-	Name     string   `form:"name" json:"name"`
-	Age      int      `form:"age" json:"age"`
-	Children []string `form:"children" json:"children"`
+	Name     string   `json:"name"`
+	Age      int      `json:"age"`
+	Children []string `json:"children"`
 }
 
 func CreatePersonService(router *gin.Engine, db *couchdb.Database) {
