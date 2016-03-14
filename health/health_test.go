@@ -1,9 +1,10 @@
 package health
-import ("testing"
-		_ "github.com/stretchr/testify/assert"
+
+import (
+	_ "github.com/stretchr/testify/assert"
+	"testing"
 )
 
-
-func TestGetPerson(t *testing.T){
+func TestGetPerson(t *testing.T) {
 
 }

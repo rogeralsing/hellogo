@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53354622-f0a2-4f45-b6d3-3d5c0a3bad09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/health/health_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/person/person_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/program_test.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/GOPATH__hellogo_.xml" afterPath="$PROJECT_DIR$/.idea/libraries/GOPATH__hellogo_.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/health/health_test.go" afterPath="$PROJECT_DIR$/health/health_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/person/person_test.go" afterPath="$PROJECT_DIR$/person/person_test.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/program.go" afterPath="$PROJECT_DIR$/program.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/program_test.go" afterPath="$PROJECT_DIR$/program_test.go" />
     </list>
     <ignored path="hellogo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,10 +45,8 @@
         <entry file="file://$PROJECT_DIR$/program.go">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-              <folding>
-                <element signature="e#14#193#0" expanded="true" />
-              </folding>
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,13 +63,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person_test.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="person_test.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/person/person_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.3033839">
+              <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
               <folding>
-                <element signature="e#14#31#0" expanded="true" />
+                <element signature="e#16#136#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,21 +79,22 @@
         <entry file="file://$PROJECT_DIR$/health/health_test.go">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <element signature="e#15#75#0" expanded="true" />
+                <marker date="1457966336011" expanded="true" signature="112:116" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="program_test.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="program_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/program_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23337223">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
-                <element signature="e#14#79#0" expanded="true" />
+                <marker date="1457966336003" expanded="true" signature="21:25" placeholder="..." />
+                <marker date="1457966336003" expanded="true" signature="303:348" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -175,10 +172,10 @@
         <option value="$PROJECT_DIR$/build/build.sh" />
         <option value="$PROJECT_DIR$/person/person.go" />
         <option value="$PROJECT_DIR$/person/person_tests.go" />
-        <option value="$PROJECT_DIR$/person/person_test.go" />
         <option value="$PROJECT_DIR$/health/health_test.go" />
         <option value="$PROJECT_DIR$/program.go" />
         <option value="$PROJECT_DIR$/program_test.go" />
+        <option value="$PROJECT_DIR$/person/person_test.go" />
       </list>
     </option>
   </component>
@@ -794,7 +791,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457903882620</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="working">
+      <created>1457965715317</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1457965715317</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -820,6 +823,12 @@
       <configuration name="Test" configurationId="GoTestRunConfiguration" />
     </history-entry>
     <history-entry file="Test - 2016.03.14 at 15h 27m 50s.xml">
+      <configuration name="Test" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test - 2016.03.14 at 15h 39m 07s.xml">
+      <configuration name="Test" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test - 2016.03.14 at 15h 39m 45s.xml">
       <configuration name="Test" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
@@ -915,9 +924,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding>
-            <element signature="e#14#193#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -957,9 +964,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-          <folding>
-            <element signature="e#14#193#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -999,9 +1004,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#193#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1251,6 +1254,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/health/health_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <marker date="1457966336011" expanded="true" signature="112:116" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/program_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <marker date="1457966336003" expanded="true" signature="21:25" placeholder="..." />
+            <marker date="1457966336003" expanded="true" signature="303:348" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/person/person.go">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1261,42 +1285,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health/health_test.go">
+    <entry file="file://$PROJECT_DIR$/program.go">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#75#0" expanded="true" />
-          </folding>
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/person/person_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.3033839">
+          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
           <folding>
-            <element signature="e#14#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/program.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding>
-            <element signature="e#14#193#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/program_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23337223">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#14#79#0" expanded="true" />
+            <element signature="e#16#136#0" expanded="true" />
           </folding>
         </state>
       </provider>

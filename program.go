@@ -13,11 +13,11 @@ import (
 func main() {
 	dbTimeout := time.Duration(500 * time.Millisecond)
 	dbPort, _ := strconv.Atoi(os.Getenv("PORT"))
-	if (dbPort == 0){
+	if dbPort == 0 {
 		panic("No DB Port given PORT")
 	}
 	dbHost := os.Getenv("HOST")
-	if (dbHost == ""){
+	if dbHost == "" {
 		panic("No DB Host given $HOST")
 	}
 	println("CouchDB Address ", dbHost, dbPort)
