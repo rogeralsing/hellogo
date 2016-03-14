@@ -54,6 +54,8 @@ func TestPutPerson(t *testing.T) {
 	resp := httptest.NewRecorder()
 	router.ServeHTTP(resp, req)
 
-	_,ok := testPersonDB.people["roger"]
+	person,ok := testPersonDB.people["roger"]
 	assert.True(t,ok,"Person not found")
+	assert.Equal(t,"Roger",person.Name)
+	assert.Equal(t,40,person.Age)
 }

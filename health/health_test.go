@@ -5,6 +5,6 @@ import (
 	"testing"
 )
 
-func TestGetPerson(t *testing.T) {
+func TestGetHealth(t *testing.T) {
 
 }
