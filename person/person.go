@@ -12,13 +12,41 @@ type Person struct {
 	Children []string `json:"children"`
 }
 
-func CreatePersonService(router *gin.Engine, db *couchdb.Database) {
+type PersonRepository interface {
+	GetPerson(id string) (Person, error)
+	SavePerson(id string, person Person) error
+}
+
+type CouchDBPersonRepository struct {
+	DB *couchdb.Database
+}
+
+func (this CouchDBPersonRepository) GetPerson(id string) (Person, error) {
+	var doc Person
+	if _, err := this.DB.Read(id, &doc, nil); err != nil {
+		return doc, err
+	}
+	return doc, nil
+}
+
+func (this CouchDBPersonRepository) SavePerson(id string, person Person) error {
+	rev, err := this.DB.Read(id, &person, nil)
+	if err != nil {
+		return err
+	}
+	if _, err := this.DB.Save(person, id, rev); err != nil {
+		return err
+	}
+	return nil
+}
+
+func CreatePersonService(router *gin.Engine, db PersonRepository) {
 	person := router.Group("api/v1/person")
 	{
 		person.GET(":id", func(c *gin.Context) {
 			id := c.Param("id")
-			var doc Person
-			if _, err := db.Read(id, &doc, nil); err != nil {
+			doc, err := db.GetPerson(id)
+			if err != nil {
 				c.JSON(http.StatusInternalServerError, err.Error())
 				return
 			}
@@ -32,12 +60,8 @@ func CreatePersonService(router *gin.Engine, db *couchdb.Database) {
 				c.JSON(http.StatusBadRequest, err.Error())
 				return
 			}
-			rev, err := db.Read(id, &doc, nil)
-			if err != nil {
-				c.JSON(http.StatusInternalServerError, err.Error())
-				return
-			}
-			if _, err := db.Save(doc, id, rev); err != nil {
+
+			if err := db.SavePerson(id, doc); err != nil {
 				c.JSON(http.StatusInternalServerError, err.Error())
 				return
 			}

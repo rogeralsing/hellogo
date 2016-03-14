@@ -29,7 +29,8 @@ func main() {
 	db := conn.SelectDB("mydb", nil)
 
 	router := gin.Default()
-	person.CreatePersonService(router, db)
+	personDB := person.CouchDBPersonRepository{DB: db}
+	person.CreatePersonService(router, personDB)
 	health.CreateHealthService(router, conn)
 	router.Run("0.0.0.0:8080")
 }
