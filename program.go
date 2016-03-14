@@ -14,7 +14,7 @@ func main() {
 	dbTimeout := time.Duration(500 * time.Millisecond)
 	dbPort, _ := strconv.Atoi(os.Getenv("PORT"))
 	if dbPort == 0 {
-		panic("No DB Port given PORT")
+		panic("No DB Port given $PORT")
 	}
 	dbHost := os.Getenv("HOST")
 	if dbHost == "" {

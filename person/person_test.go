@@ -8,6 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 	"bytes"
+	"encoding/json"
 )
 
 type TestPersonRepository struct {
@@ -35,8 +36,10 @@ func TestGetPerson(t *testing.T) {
 	req, _ := http.NewRequest("GET", "/api/v1/person/roger", nil)
 	resp := httptest.NewRecorder()
 	router.ServeHTTP(resp, req)
-
-	assert.Equal(t, "{\"name\":\"Roger\",\"age\":40,\"children\":null}\n", resp.Body.String())
+	var person Person
+	json.Unmarshal(resp.Body.Bytes(),&person)
+	assert.Equal(t, "Roger", person.Name )
+	assert.Equal(t, 40, person.Age )
 }
 
 func TestPutPerson(t *testing.T) {
@@ -45,9 +48,10 @@ func TestPutPerson(t *testing.T) {
 	testPersonDB := TestPersonRepository{people: map[string]Person{}}
 	CreatePersonService(router, testPersonDB)
 
-	var jsonStr = []byte(`{"name":"Roger","age":40}`)
+	inputPerson := Person{Name:"Roger",Age:40,Children:[]string{"Alex","Alva","Alice","Theo"}}
+	b,_ :=json.Marshal(inputPerson)
 
-	req, _ := http.NewRequest("PUT", "/api/v1/person/roger", bytes.NewBuffer(jsonStr))
+	req, _ := http.NewRequest("PUT", "/api/v1/person/roger", bytes.NewBuffer(b))
 	req.Header.Set("X-Custom-Header", "myvalue")
 	req.Header.Set("Content-Type", "application/json")
 
@@ -56,6 +60,7 @@ func TestPutPerson(t *testing.T) {
 
 	person,ok := testPersonDB.people["roger"]
 	assert.True(t,ok,"Person not found")
-	assert.Equal(t,"Roger",person.Name)
-	assert.Equal(t,40,person.Age)
+	assert.Equal(t,inputPerson.Name,person.Name)
+	assert.Equal(t,inputPerson.Age,person.Age)
+	assert.Equal(t,inputPerson.Children,person.Children)
 }
