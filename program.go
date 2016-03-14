@@ -11,10 +11,15 @@ import (
 )
 
 func main() {
-	//gin.SetMode(gin.ReleaseMode)
 	dbTimeout := time.Duration(500 * time.Millisecond)
 	dbPort, _ := strconv.Atoi(os.Getenv("PORT"))
+	if (dbPort == 0){
+		panic("No DB Port given PORT")
+	}
 	dbHost := os.Getenv("HOST")
+	if (dbHost == ""){
+		panic("No DB Host given $HOST")
+	}
 	println("CouchDB Address ", dbHost, dbPort)
 	conn, err := couchdb.NewConnection(dbHost, dbPort, dbTimeout)
 	if err != nil {
