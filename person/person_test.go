@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+	"bytes"
 )
 
 type TestPersonRepository struct {
@@ -22,6 +23,7 @@ func (this TestPersonRepository) GetPerson(id string) (Person, error) {
 }
 
 func (this TestPersonRepository) SavePerson(id string, person Person) error {
+	this.people[id] = person
 	return nil
 }
 
@@ -35,4 +37,23 @@ func TestGetPerson(t *testing.T) {
 	router.ServeHTTP(resp, req)
 
 	assert.Equal(t, "{\"name\":\"Roger\",\"age\":40,\"children\":null}\n", resp.Body.String())
+}
+
+func TestPutPerson(t *testing.T) {
+	gin.SetMode(gin.TestMode)
+	router := gin.Default()
+	testPersonDB := TestPersonRepository{people: map[string]Person{}}
+	CreatePersonService(router, testPersonDB)
+
+	var jsonStr = []byte(`{"name":"Roger","age":40}`)
+
+	req, _ := http.NewRequest("PUT", "/api/v1/person/roger", bytes.NewBuffer(jsonStr))
+	req.Header.Set("X-Custom-Header", "myvalue")
+	req.Header.Set("Content-Type", "application/json")
+
+	resp := httptest.NewRecorder()
+	router.ServeHTTP(resp, req)
+
+	_,ok := testPersonDB.people["roger"]
+	assert.True(t,ok,"Person not found")
 }
