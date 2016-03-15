@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="53354622-f0a2-4f45-b6d3-3d5c0a3bad09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/person/person_test.go" afterPath="$PROJECT_DIR$/person/person_test.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/program.go" afterPath="$PROJECT_DIR$/program.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/person/person.go" afterPath="$PROJECT_DIR$/person/person.go" />
     </list>
     <ignored path="hellogo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/program.go">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+              <caret line="28" column="36" selection-start-line="23" selection-start-column="4" selection-end-line="28" selection-end-column="36" />
               <folding>
                 <element signature="e#14#193#0" expanded="true" />
               </folding>
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="person.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/person/person.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.34655777">
+              <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
               <folding>
                 <element signature="e#16#100#0" expanded="true" />
               </folding>
@@ -53,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person_test.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="person_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/person/person_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8953722">
-              <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#16#169#0" expanded="true" />
               </folding>
@@ -94,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/health/health.go">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding>
                 <element signature="e#16#100#0" expanded="true" />
               </folding>
@@ -158,15 +157,15 @@
         <option value="$PROJECT_DIR$/docker-compose.yaml" />
         <option value="$PROJECT_DIR$/build.sh" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/health/health.go" />
         <option value="$PROJECT_DIR$/build/build.sh" />
         <option value="$PROJECT_DIR$/person/person_tests.go" />
         <option value="$PROJECT_DIR$/program_test.go" />
-        <option value="$PROJECT_DIR$/persistence/persistence.go" />
-        <option value="$PROJECT_DIR$/person/person.go" />
         <option value="$PROJECT_DIR$/health/health_test.go" />
         <option value="$PROJECT_DIR$/program.go" />
         <option value="$PROJECT_DIR$/person/person_test.go" />
+        <option value="$PROJECT_DIR$/health/health.go" />
+        <option value="$PROJECT_DIR$/person/person.go" />
+        <option value="$PROJECT_DIR$/persistence/persistence.go" />
       </list>
     </option>
   </component>
@@ -179,8 +178,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="width" value="1922" />
-    <option name="height" value="938" />
+    <option name="width" value="2562" />
+    <option name="height" value="1298" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -251,6 +250,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="health" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellogo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellogo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -826,28 +839,22 @@
       <option name="project" value="LOCAL" />
       <updated>1457969464443</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="working">
+      <created>1457980712940</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1457980712940</updated>
+    </task>
+    <task id="LOCAL-00028" summary="working">
+      <created>1457981189481</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1457981189481</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2016.03.14 at 16h 27m 51s.xml">
-      <configuration name="Test" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2016.03.14 at 16h 29m 24s.xml">
-      <configuration name="Test" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2016.03.14 at 16h 29m 51s.xml">
-      <configuration name="Test" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2016.03.14 at 19h 32m 14s.xml">
-      <configuration name="Test" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2016.03.14 at 19h 33m 23s.xml">
-      <configuration name="Test" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2016.03.14 at 19h 33m 48s.xml">
-      <configuration name="Test" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="Test - 2016.03.14 at 19h 36m 20s.xml">
       <configuration name="Test" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -860,9 +867,27 @@
     <history-entry file="Test - 2016.03.14 at 19h 38m 15s.xml">
       <configuration name="Test" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="Test - 2016.03.14 at 19h 41m 27s.xml">
+      <configuration name="Test" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test - 2016.03.14 at 19h 42m 48s.xml">
+      <configuration name="Test" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test - 2016.03.14 at 19h 45m 22s.xml">
+      <configuration name="Test" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test - 2016.03.14 at 21h 39m 40s.xml">
+      <configuration name="Test" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test - 2016.03.14 at 21h 40m 26s.xml">
+      <configuration name="Test" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test - 2016.03.14 at 21h 43m 37s.xml">
+      <configuration name="Test" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="938" extended-state="6" />
+    <frame x="-1" y="0" width="2562" height="1298" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -879,8 +904,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3538841" sideWeight="0.4921875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1578125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24508967" sideWeight="0.4921875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -917,13 +942,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/program.go">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1262,46 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/person/person.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="e#16#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/program.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-          <folding>
-            <element signature="e#14#193#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health/health.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health/health_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hellogo.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1609658">
@@ -1318,12 +1296,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/program.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="36" selection-start-line="23" selection-start-column="4" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="e#14#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health/health.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#16#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health/health_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#16#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/person/person_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8953722">
-          <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#16#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/person/person.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34655777">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="e#16#100#0" expanded="true" />
           </folding>
         </state>
       </provider>

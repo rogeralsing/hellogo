@@ -34,6 +34,7 @@ func (this CouchDBPersonRepository) SavePerson(id string, person Person) error {
 	if err != nil {
 		return err
 	}
+	//this is actually racy...
 	if _, err := this.DB.Save(person, id, rev); err != nil {
 		return err
 	}
