@@ -6,7 +6,7 @@ import (
 	"log"
 	"google.golang.org/grpc"
 	"golang.org/x/net/context"
-	"github.com/stretchr/testify/assert"
+	_ "github.com/stretchr/testify/assert"
 	"github.com/golang/protobuf/proto"
 )
 
@@ -25,6 +25,10 @@ func TestServerConnection(t *testing.T) {
 	conn, err := grpc.Dial(address, grpc.WithInsecure())
 	defer conn.Close()
 	client := NewHelloServiceClient(conn)
-	response,err := client.SayHello(context.Background(), &HelloRequest{Greeting: proto.String("hello")})
-	assert.Equal(t,"hej",*response.Reply)
+
+	for i:=0;i<12000 ;i++  {
+		client.SayHello(context.Background(), &HelloRequest{Greeting: proto.String("hello")})
+	}
+
+	//assert.Equal(t,"hej",*response.Reply)
 }
