@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+	"github.com/afex/hystrix-go/hystrix
 )
 
 type TestPersonRepository struct {
@@ -48,10 +49,10 @@ func TestGetPerson(t *testing.T) {
 	req, _ := http.NewRequest("GET", "/api/v1/person/roger", nil)
 	resp := httptest.NewRecorder()
 	router.ServeHTTP(resp, req)
-
-	//assert
 	var person Person
 	json.Unmarshal(resp.Body.Bytes(), &person)
+
+	//assert
 	assert.Equal(t, inputPerson.Name, person.Name)
 	assert.Equal(t, inputPerson.Age, person.Age)
 	assert.Equal(t, inputPerson.Children, person.Children)
@@ -72,9 +73,9 @@ func TestPutPerson(t *testing.T) {
 	req.Header.Set("Content-Type", "application/json")
 	resp := httptest.NewRecorder()
 	router.ServeHTTP(resp, req)
+	person, ok := testPersonDB.people["roger"]
 
 	//assert
-	person, ok := testPersonDB.people["roger"]
 	assert.True(t, ok, "Person not found")
 	assert.Equal(t, inputPerson.Name, person.Name)
 	assert.Equal(t, inputPerson.Age, person.Age)

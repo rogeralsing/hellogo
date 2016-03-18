@@ -1,5 +1,5 @@
 message HelloRequest {
-    required string greeting = 1;
+    optional string greeting = 1;
 }
 
 message HelloResponse {
@@ -7,7 +7,7 @@ message HelloResponse {
 }
 
 message Bar {
-    required int32 id = 1;
+    optional int32 id = 1;
     repeated string apa = 2;
     oneof one {
         string a = 3;

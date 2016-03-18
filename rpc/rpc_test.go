@@ -18,7 +18,7 @@ func TestServerConnection(t *testing.T) {
 	}
 	defer lis.Close()
 	s := grpc.NewServer()
-	server := HelloServiceServerConcrete{}
+	server := Server{}
 	RegisterHelloServiceServer(s,&server)
 	go s.Serve(lis)
 

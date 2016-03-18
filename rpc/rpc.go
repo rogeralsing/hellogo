@@ -5,10 +5,10 @@ import (
 	"github.com/golang/protobuf/proto"
 )
 
-type HelloServiceServerConcrete struct {
+type Server struct {
 }
 
-func (this HelloServiceServerConcrete) SayHello(context context.Context,request *HelloRequest) (*HelloResponse, error) {
+func (this Server) SayHello(context context.Context,request *HelloRequest) (*HelloResponse, error) {
 	response := &HelloResponse{
 		Reply: proto.String("hej"),
 	}
