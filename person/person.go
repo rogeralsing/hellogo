@@ -48,6 +48,7 @@ func CreatePersonService(router *gin.Engine, db PersonRepository) {
 			id := c.Param("id")
 			doc, err := db.GetPerson(id)
 			if err != nil {
+
 				c.JSON(http.StatusInternalServerError, err.Error())
 				return
 			}

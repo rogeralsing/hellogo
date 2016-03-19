@@ -9,7 +9,6 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
-	"github.com/afex/hystrix-go/hystrix
 )
 
 type TestPersonRepository struct {

@@ -6,11 +6,12 @@ import (
 	"log"
 	"google.golang.org/grpc"
 	"golang.org/x/net/context"
-	_ "github.com/stretchr/testify/assert"
 	"github.com/golang/protobuf/proto"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestServerConnection(t *testing.T) {
+	//arrange
 	const address = "127.0.0.1:8090"
 	lis, err := net.Listen("tcp", address)
 	if err != nil {
@@ -26,9 +27,9 @@ func TestServerConnection(t *testing.T) {
 	defer conn.Close()
 	client := NewHelloServiceClient(conn)
 
-	for i:=0;i<12000 ;i++  {
-		client.SayHello(context.Background(), &HelloRequest{Greeting: proto.String("hello")})
-	}
+	//act
+	response,err := client.SayHello(context.Background(), &HelloRequest{Greeting: proto.String("hello")})
 
-	//assert.Equal(t,"hej",*response.Reply)
+	//assert
+	assert.Equal(t,"hej",*response.Reply)
 }

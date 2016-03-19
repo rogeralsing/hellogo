@@ -6,15 +6,6 @@ message HelloResponse {
     optional string reply = 1;
 }
 
-message Bar {
-    optional int32 id = 1;
-    repeated string apa = 2;
-    oneof one {
-        string a = 3;
-        int32 b = 4;
-    }
-}
-
 service HelloService {
     rpc SayHello(HelloRequest) returns (HelloResponse);
 }
