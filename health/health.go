@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/rhinoman/couchdb-go"
 	"net/http"
+	"os"
 )
 
 func CreateHealthService(router *gin.Engine, conn *couchdb.Connection) {
@@ -11,7 +12,8 @@ func CreateHealthService(router *gin.Engine, conn *couchdb.Connection) {
 	{
 		health.GET("", func(c *gin.Context) {
 			if err := conn.Ping(); err == nil {
-				c.JSON(http.StatusOK, "Healthy")
+				host,_ := os.Hostname()
+				c.JSON(http.StatusOK, host)
 			} else {
 				c.JSON(http.StatusInternalServerError, err.Error())
 			}

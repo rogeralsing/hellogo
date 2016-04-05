@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
 	dbTimeout := time.Duration(500 * time.Millisecond)
 	dbPort, _ := strconv.Atoi(os.Getenv("PORT"))
 	if dbPort == 0 {
@@ -28,7 +29,7 @@ func main() {
 
 	db := conn.SelectDB("mydb", nil)
 
-	router := gin.Default()
+	router := gin.New()
 	personDB := person.CouchDBPersonRepository{DB: db}
 	person.CreatePersonService(router, personDB)
 	health.CreateHealthService(router, conn)

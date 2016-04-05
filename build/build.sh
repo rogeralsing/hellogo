@@ -2,6 +2,7 @@
 echo compiling Go via Docker
 docker run -it --rm -v ${GOPATH}:/app -e GOPATH="/app" -w "/app/src/github.com/rogeralsing/hellogo" golang sh -c 'CGO_ENABLED=0 go build -a --installsuffix cgo --ldflags="-s" -o build/hello'
 echo Building Docker image
+
 docker build -t rogeralsing/hellogo .
 docker push rogeralsing/hellogo
 
